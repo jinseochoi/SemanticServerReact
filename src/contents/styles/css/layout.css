@@ -45,7 +45,7 @@ ul, li, ol {
 }
 .layout .snb > div .menu {
   height: calc(100% - 56px);
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   overflow: auto;
 }
 .layout .snb > div .menu::-webkit-scrollbar {
@@ -59,21 +59,22 @@ ul, li, ol {
 .layout .snb > div .menu::-webkit-scrollbar-track {
   background: rgba(241, 245, 249, 0.2); /*스크롤바 뒷 배경 색상*/
 }
-.layout .snb > div .menu > div {
+.layout .snb > div .menu .level1 > li {
   padding-top: 40px;
 }
-.layout .snb > div .menu > div .category {
-  color: #13C690;
-  font-size: 12px;
+.layout .snb > div .menu .level1 > li .lvl1-name {
   padding: 0px 20px;
   margin-bottom: 8px;
 }
-.layout .snb > div .menu > div > div {
-  padding: 0px 6px;
+.layout .snb > div .menu .level1 > li .lvl1-name p {
+  color: #13C690;
+  font-size: 12px;
 }
-.layout .snb > div .menu > div > div a {
+.layout .snb > div .menu .level1 > li .level2 li {
+  padding: 4px 6px;
+}
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name {
   height: 36px;
-  margin: 2px 0px 4px;
   padding: 0px 14px;
   border-radius: 4px;
   display: flex;
@@ -84,41 +85,90 @@ ul, li, ol {
   cursor: pointer;
   text-decoration: none;
 }
-.layout .snb > div .menu > div > div a:last-child {
-  margin-bottom: 0px;
-}
-.layout .snb > div .menu > div > div a:hover {
-  background-color: #2C3344;
-  color: #fff;
-}
-.layout .snb > div .menu > div > div a:active, .layout .snb > div .menu > div > div a.active {
-  background-color: #2C3344;
-  color: #fff;
-}
-.layout .snb > div .menu > div > div a div {
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name div {
   width: calc(100% - 16px);
   overflow: hidden;
   display: flex;
   align-items: center;
 }
-.layout .snb > div .menu > div > div a div i {
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name div i {
   width: 24px;
   height: 24px;
   margin-right: 12px;
   font-size: 24px;
 }
-.layout .snb > div .menu > div > div a div p {
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name div p {
   width: calc(100% - 36px);
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.layout .snb > div .menu > div > div a .icon-chevron_right {
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name .icon-chevron_right {
   font-size: 16px;
 }
-.layout .snb > div .menu > div:first-child {
-  padding-top: 24px;
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name .icon-chevron_right.close {
+  transform: rotate(90deg);
+}
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name .icon-chevron_right.open {
+  transform: rotate(-90deg);
+}
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name:hover {
+  background-color: #2C3344;
+}
+.layout .snb > div .menu .level1 > li .level2 li .lvl2-name:active, .layout .snb > div .menu .level1 > li .level2 li .lvl2-name.active {
+  background-color: #2C3344;
+  color: #fff;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper {
+  overflow: hidden;
+  transition: 0.2s;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li {
+  padding: 3px 0px;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name {
+  height: 32px;
+  padding: 0px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+  text-decoration: none;
+  color: #9CA3AF;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name > div {
+  width: 100%;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name > div i {
+  font-size: 4px;
+  margin-right: 8px;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name > div p {
+  font-size: 15px;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name:hover {
+  background-color: #2C3344;
+  color: #fff;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name:active, .layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li .lvl3-name.active {
+  background-color: #2C3344;
+  color: #fff;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li:first-child {
+  padding-top: 6px;
+}
+.layout .snb > div .menu .level1 > li .level2 li .level3-wrapper .level3 li:last-child {
+  padding-bottom: 0px;
+}
+.layout .snb > div .menu .level1 > li .level2 li:hover .lvl2-name {
+  color: #fff;
+}
+.layout .snb > div .menu .level1 > li:first-child {
+  padding-top: 28px;
 }
 .layout .main {
   width: calc(100% - 250px);

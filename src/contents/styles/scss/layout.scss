@@ -48,80 +48,148 @@ ul, li, ol {
 
             .menu {
                 height: calc(100% - 56px);
-                padding-bottom: 8px;
+                padding-bottom: 4px;
                 overflow: auto;
                 @include nav-scrollbar;
 
-                > div {
-                    padding-top: 40px;
+                .level1 {
+                    > li {
+                        padding-top: 40px;
 
-                    .category {
-                        color: #13C690;
-                        font-size: 12px;
-                        padding: 0px 20px;
-                        margin-bottom: 8px;
-                    }
-
-                    > div {
-                        padding: 0px 6px;
-
-                        a {
-                            height: 36px;
-                            margin: 2px 0px 4px;
-                            padding: 0px 14px;
-                            border-radius: 4px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            color: #9CA3AF;
-                            transition: 0.2s;
-                            cursor: pointer;
-                            text-decoration: none;
-
-                            &:last-child {
-                                margin-bottom: 0px;
-                            }
-
-                            &:hover {
-                                background-color: #2C3344;
-                                color: #fff;
-                            }
-
-                            &:active, &.active {
-                                background-color: #2C3344;
-                                color: #fff;
-                            }
-
-                            div {
-                                width: calc(100% - 16px);
-                                overflow: hidden;
-                                display: flex;
-                                align-items: center;
-
-                                i {
-                                    width: 24px;
-                                    height: 24px;
-                                    margin-right: 12px;
-                                    font-size: 24px;
-                                }
-
-                                p {
-                                    width: calc(100% - 36px);
-                                    font-size: 14px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-
-                            .icon-chevron_right {
-                                font-size: 16px;
+                        .lvl1-name {
+                            padding: 0px 20px;
+                            margin-bottom: 8px;
+    
+                            p {
+                                color: #13C690;
+                                font-size: 12px;
                             }
                         }
-                    }
+    
+                        .level2 {
+                            li {
+                                padding: 4px 6px;
 
-                    &:first-child {
-                        padding-top: 24px;
+                                .lvl2-name {
+                                    height: 36px;
+                                    padding: 0px 14px;
+                                    border-radius: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    color: #9CA3AF;
+                                    transition: 0.2s;
+                                    cursor: pointer;
+                                    text-decoration: none;
+
+                                    div {
+                                        width: calc(100% - 16px);
+                                        overflow: hidden;
+                                        display: flex;
+                                        align-items: center;
+        
+                                        i {
+                                            width: 24px;
+                                            height: 24px;
+                                            margin-right: 12px;
+                                            font-size: 24px;
+                                        }
+        
+                                        p {
+                                            width: calc(100% - 36px);
+                                            font-size: 14px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+        
+                                    .icon-chevron_right {
+                                        font-size: 16px;
+
+                                        &.close {
+                                            transform: rotate(90deg);
+                                        }
+                                        &.open {
+                                            transform: rotate(-90deg)
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background-color: #2C3344;
+                                    }
+
+                                    &:active, &.active {
+                                        background-color: #2C3344;
+                                        color: #fff;
+                                    }
+                                }
+
+                                .level3-wrapper {
+                                    overflow: hidden;
+                                    transition: 0.2s;
+
+                                    .level3 {
+                                        li {
+                                            // height: 38px;
+                                            padding: 3px 0px;
+
+                                            .lvl3-name {
+                                                height: 32px;
+                                                padding: 0px 20px;
+                                                border-radius: 4px;
+                                                display: flex;
+                                                align-items: center;
+                                                transition: 0.2s;
+                                                text-decoration: none;
+                                                color: $gray-30;
+    
+                                                > div {
+                                                    width: 100%;
+                                                    padding-left: 8px;
+                                                    display: flex;
+                                                    align-items: center;
+    
+                                                    i {
+                                                        font-size: 4px;
+                                                        margin-right: 8px;
+                                                    }
+                                                    p {
+                                                        font-size: 15px;
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    background-color: #2C3344;
+                                                    color: #fff;
+                                                }
+                                                &:active, &.active {
+                                                    background-color: #2C3344;
+                                                    color: #fff;
+                                                }
+                                            }
+
+                                            &:first-child {
+                                                padding-top: 6px;
+                                            }
+                                            &:last-child {
+                                                padding-bottom: 0px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    .lvl2-name {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            padding-top: 28px;
+                        }
                     }
                 }
             }
