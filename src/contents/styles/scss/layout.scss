@@ -48,6 +48,7 @@ ul, li, ol {
 
             .menu {
                 height: calc(100% - 56px);
+                padding-bottom: 8px;
                 overflow: auto;
                 @include nav-scrollbar;
 

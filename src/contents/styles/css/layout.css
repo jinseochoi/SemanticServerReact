@@ -45,6 +45,7 @@ ul, li, ol {
 }
 .layout .snb > div .menu {
   height: calc(100% - 56px);
+  padding-bottom: 8px;
   overflow: auto;
 }
 .layout .snb > div .menu::-webkit-scrollbar {
